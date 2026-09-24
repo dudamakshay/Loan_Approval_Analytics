@@ -1,242 +1,137 @@
-\# Loan Approval Prediction and Analytics Using Machine Learning
+# Loan Approval Prediction and Analytics Using Machine Learning
 
+## Project Overview
 
+This project develops a machine learning-based system for **loan approval prediction and analytics**.
 
-\## Project Overview
+The system analyzes applicant information such as income, loan amount, loan term, CIBIL score, education, employment status, dependents, and asset values to predict whether a loan application is likely to be **Approved** or **Rejected**.
 
+The project includes:
 
+- Data cleaning and preprocessing
+- Exploratory Data Analysis (EDA)
+- Data visualization
+- Machine learning model development
+- Model comparison
+- Model evaluation
+- Loan approval prediction
+- Trained model serialization
+- Streamlit-based prediction application
 
-This project develops a machine learning-based system for predicting loan approval status and performing analytics on loan application data.
+---
 
+## Dataset
 
+The dataset used in this project is the **Loan Approval Prediction Dataset** available on Kaggle.
 
-The project uses a dataset containing 4,269 loan application records and 13 columns. The target variable is `loan\_status`, containing two classes: Approved and Rejected.
+**Dataset Source:**
 
+https://www.kaggle.com/datasets/architsharma01/loan-approval-prediction-dataset
 
+**Dataset file used:**
 
-The project includes data cleaning, exploratory data analysis, machine learning model training, model evaluation, model comparison, model saving, and loan prediction.
+`loan_approval_dataset.csv`
 
+**Dataset size:**
 
+- Rows: 4,269
+- Columns: 13
 
-\## Objectives
+### Dataset Features
 
+| Feature | Description |
+|---|---|
+| `loan_id` | Unique loan application identifier |
+| `no_of_dependents` | Number of dependents |
+| `education` | Applicant education status |
+| `self_employed` | Whether the applicant is self-employed |
+| `income_annum` | Annual income |
+| `loan_amount` | Requested loan amount |
+| `loan_term` | Loan repayment term |
+| `cibil_score` | Applicant's CIBIL credit score |
+| `residential_assets_value` | Value of residential assets |
+| `commercial_assets_value` | Value of commercial assets |
+| `luxury_assets_value` | Value of luxury assets |
+| `bank_asset_value` | Value of bank assets |
+| `loan_status` | Target variable: Approved or Rejected |
 
+---
 
-\- Analyze the loan approval dataset.
+## Project Objectives
 
-\- Clean and preprocess the dataset.
+The main objectives of this project are:
 
-\- Perform exploratory data analysis.
+1. Analyze the loan approval dataset.
+2. Identify and handle data-quality issues.
+3. Perform exploratory data analysis.
+4. Visualize important relationships within the dataset.
+5. Prepare the data for machine learning.
+6. Train multiple classification algorithms.
+7. Compare model performance using standard evaluation metrics.
+8. Select a model based on the evaluation results.
+9. Save the trained machine learning model.
+10. Provide a prediction interface using Streamlit.
 
-\- Analyze relationships between applicant, financial and credit attributes.
+---
 
-\- Train multiple machine learning classification models.
+## Technologies Used
 
-\- Compare model performance using standard evaluation metrics.
+### Programming Language
 
-\- Save the trained machine learning model.
+- Python 3.13
 
-\- Generate loan approval predictions.
+### Libraries
 
-\- Provide a Streamlit application for interactive use.
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Joblib
+- Streamlit
 
+### Development Tools
 
+- Visual Studio Code / Python environment
+- PowerShell / Command Prompt
+- Git
+- GitHub
 
-\## Dataset
+---
 
-
-
-Dataset file:
-
-
-
-`loan\_approval\_dataset.csv`
-
-
-
-Dataset size:
-
-
-
-\- Rows: 4,269
-
-\- Columns: 13
-
-\- Missing values: 0
-
-\- Duplicate rows: 0
-
-
-
-\### Features
-
-
-
-\- `loan\_id`
-
-\- `no\_of\_dependents`
-
-\- `education`
-
-\- `self\_employed`
-
-\- `income\_annum`
-
-\- `loan\_amount`
-
-\- `loan\_term`
-
-\- `cibil\_score`
-
-\- `residential\_assets\_value`
-
-\- `commercial\_assets\_value`
-
-\- `luxury\_assets\_value`
-
-\- `bank\_asset\_value`
-
-
-
-\### Target Variable
-
-
-
-`loan\_status`
-
-
-
-Classes:
-
-
-
-\- Approved
-
-\- Rejected
-
-
-
-\## Technologies Used
-
-
-
-\- Python
-
-\- Pandas
-
-\- NumPy
-
-\- Scikit-learn
-
-\- Matplotlib
-
-\- Seaborn
-
-\- Joblib
-
-\- Streamlit
-
-
-
-\## Machine Learning Models
-
-
-
-The project trains and evaluates:
-
-
-
-1\. Logistic Regression
-
-2\. Random Forest
-
-3\. Gradient Boosting
-
-
-
-\## Model Performance
-
-
-
-| Model | Accuracy | Precision | Recall | F1 Score |
-
-|---|---:|---:|---:|---:|
-
-| Logistic Regression | 92.27% | 92.66% | 95.10% | 93.87% |
-
-| Random Forest | 98.24% | 97.78% | 99.44% | 98.60% |
-
-| Gradient Boosting | 98.24% | 97.96% | 99.25% | 98.60% |
-
-
-
-The executed project selected \*\*Random Forest\*\* as the final model.
-
-
-
-\### Final Random Forest Results
-
-
-
-\- Accuracy: 98.24%
-
-\- Precision: 97.78%
-
-\- Recall: 99.44%
-
-\- F1 Score: 98.60%
-
-
-
-\## Project Workflow
-
-
+## Project Structure
 
 ```text
-
-Dataset
-
-&#x20;  ↓
-
-Data Inspection
-
-&#x20;  ↓
-
-Data Cleaning
-
-&#x20;  ↓
-
-Exploratory Data Analysis
-
-&#x20;  ↓
-
-Feature Preparation
-
-&#x20;  ↓
-
-Train / Test Split
-
-&#x20;  ↓
-
-Model Training
-
-&#x20;  ↓
-
-Model Evaluation
-
-&#x20;  ↓
-
-Model Comparison
-
-&#x20;  ↓
-
-Random Forest Selection
-
-&#x20;  ↓
-
-Model Saving
-
-&#x20;  ↓
-
-Loan Approval Prediction
-
+Loan_Approval_Analytics/
+│
+├── Loan_Approval_Analytics_Project.py
+├── app.py
+├── inspect_data.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+│
+├── data/
+│   ├── loan_approval_dataset.csv
+│   └── loan_approval_cleaned.csv
+│
+├── models/
+│   └── loan_approval_model.joblib
+│
+├── reports/
+│   ├── cibil_score_distribution.png
+│   ├── cibil_vs_loan_amount.png
+│   ├── confusion_matrix.png
+│   ├── correlation_heatmap.png
+│   ├── education_vs_loan_status.png
+│   ├── income_by_loan_status.png
+│   ├── loan_amount_by_status.png
+│   ├── loan_status_distribution.png
+│   ├── loan_term_distribution.png
+│   ├── model_comparison.csv
+│   └── self_employed_vs_loan_status.png
+│
+└── src/
+    ├── data_cleaning.py
+    ├── eda.py
+    └── model.py
